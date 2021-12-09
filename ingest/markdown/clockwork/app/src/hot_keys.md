@@ -1,0 +1,1 @@
+The `hot_keys.rs` file is part of the Clockwork project and is responsible for handling keyboard shortcuts (hotkeys) within the ap
