@@ -19,4 +19,5 @@ In summary, the `new_secret.rs` file provides a user interface for creating a ne
    Answer: The `dotenv!("RELAYER_URL")` macro is used to read the value of the `RELAYER_URL` environment variable, which is the URL of the relayer API that the `create_secret` function sends requests to.
 
 5. Question: How are the input fields for the secret's name and value handled in the `NewSecretPage` function?
-   Answer: The input fields for the secret's name and value are managed usi
+   Answer: The input fields for the secret's name and value are managed using the `use_state` hook, which creates a stateful value and a function to update it. The `oninput` event handler is used to update the state when the user types in the input fields.
+    

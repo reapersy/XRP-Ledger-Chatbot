@@ -1,0 +1,1 @@
+The `errors.rs` file is part of the Clockwork project and is responsible for defining and handling custom error types
