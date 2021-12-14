@@ -13,4 +13,17 @@ The `SplToken` trait provides functions for creating, minting, transferring, and
 In summary, the `client.rs` file provides a comprehensive set of functions for interacting with the Solana blockchain and SPL tokens, making it an essential part of the Clockwork project.
 ## Questions: 
  1. Question: What is the purpose of the `Client` struct and its associated methods?
-   Answer: The `Client` struct represents an RPC client with a payer account. It provides methods for interacting with the Solana blockchain, such as sending transaction
+   Answer: The `Client` struct represents an RPC client with a payer account. It provides methods for interacting with the Solana blockchain, such as sending transactions, getting account data, and working with SPL tokens.
+
+2. Question: How does the `get<T: AccountDeserialize>(&self, pubkey: &Pubkey)` method work?
+   Answer: The `get` method retrieves the account data associated with the given `pubkey` and attempts to deserialize it into the specified type `T` that implements the `AccountDeserialize` trait. If successful, it returns the deserialized data; otherwise, it returns a `ClientError::DeserializationError`.
+
+3. Question: What is the purpose of the `SplToken` trait and its implementations for the `Client` struct?
+   Answer: The `SplToken` trait defines a set of methods for working with SPL tokens, such as creating token mints and accounts, minting tokens, transferring tokens, and closing token accounts. The `Client` struct implements this trait, providing the functionality to interact with SPL tokens on the Solana blockchain.
+
+4. Question: How does the `send<T: Signers>(&self, ixs: &[Instruction], signers: &T)` method work?
+   Answer: The `send` method creates a new transaction with the given instructions (`ixs`) and signs it using the provided signers (`signers`). It then sends the signed transaction to the Solana blockchain and returns the transaction's signature.
+
+5. Question: What is the purpose of the `ClientError` enum and the `ClientResult<T>` type alias?
+   Answer: The `ClientError` enum represents various errors that can occur while interacting with the Solana blockchain, such as client errors, program errors, and deserialization errors. The `ClientResult<T>` type alias is a shorthand for `Result<T, ClientError>`, which is used as the return type for many methods in the `Client` struct.
+    
