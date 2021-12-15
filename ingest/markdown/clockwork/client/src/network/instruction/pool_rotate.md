@@ -26,4 +26,9 @@ In summary, the `pool_rotate.rs` file defines a function that creates an instruc
 3. Question: What is the significance of the `AccountMeta` struct and its `new_readonly` and `new` methods?
    Answer: The `AccountMeta` struct represents an account's metadata in the Solana program, and the `new_readonly` and `new` methods are used to create instances of `AccountMeta` with different access permissions (read-only or writable).
 
-4. Question: What is th
+4. Question: What is the role of the `clockwork_network_program::instruction::PoolRotate` struct and its `data` method?
+   Answer: The `clockwork_network_program::instruction::PoolRotate` struct represents the instruction data for the pool rotation operation, and its `data` method is used to serialize the instruction data into a byte vector.
+
+5. Question: How is the `Instruction` struct being used in the `pool_rotate` function?
+   Answer: The `Instruction` struct is being used to create a new instruction for the Clockwork network program with the specified program ID, accounts metadata, and serialized instruction data.
+    
