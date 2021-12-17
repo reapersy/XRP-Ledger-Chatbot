@@ -16,4 +16,8 @@ Both structs use the `Ordinal` type from the `ordinal` module and the time unit 
    Answer: The `reset_*` methods are used to reset the corresponding "first" flags (e.g., `first_month`, `first_day_of_month`, etc.) to `false`, which indicates that the initial datetime has already been considered for that time unit, and the next/previous occurrence should be calculated from the minimum/maximum value of that time unit.
 
 4. Question: Why are the `year_lower_bound` and `year_upper_bound` methods implemented differently from the other `*_lower_bound` and `*_upper_bound` methods?
-   Answer: Unlike the othe
+   Answer: Unlike the other time units, years will never wrap around, so there is no need to reset the "first" flag or calculate the minimum/maximum value for years. The `year_lower_bound` and `year_upper_bound` methods simply return the year of the initial datetime as the lower and upper bounds, respectively.
+
+5. Question: What is the purpose of the `TODO` comment at the beginning of the code?
+   Answer: The `TODO` comment suggests that there might be a possibility to refactor the code and use a single query struct instead of having separate `NextAfterQuery` and `PrevFromQuery` structs. This indicates that the developer might be considering future improvements to the code structure.
+    
