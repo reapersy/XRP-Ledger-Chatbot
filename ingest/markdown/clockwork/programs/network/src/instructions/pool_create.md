@@ -15,4 +15,20 @@ The `handler` function takes a `Context<PoolCreate>` as its argument and returns
 2. Initializes the `pool` account by calling the `init` method with the current value of `registry.total_pools`.
 3. Increments the `registry.total_pools` counter using a checked addition to prevent overflow errors.
 
-In summary, the `pool_create.rs` file is responsible for creating and initializing a new pool in the Clockwork project. It defines the `PoolCreate` struct with necessary account fields and a `handler` function that initializes the po
+In summary, the `pool_create.rs` file is responsible for creating and initializing a new pool in the Clockwork project. It defines the `PoolCreate` struct with necessary account fields and a `handler` function that initializes the pool and updates the registry's pool counter.
+## Questions: 
+ 1. Question: What is the purpose of the `PoolCreate` struct and its associated fields?
+   Answer: The `PoolCreate` struct is used to define the account types and constraints required for creating a new pool in the clockwork project. It contains fields for admin, config, payer, pool, registry, and system_program, each with specific attributes and constraints.
+
+2. Question: How are the seeds and bump values used in the `#[account]` attributes for the `pool` and `registry` fields?
+   Answer: The seeds and bump values are used to derive the addresses for the `pool` and `registry` accounts using the program-derived address (PDA) mechanism. This ensures that the addresses are unique and deterministic based on the provided seeds and bump values.
+
+3. Question: What is the purpose of the `handler` function and what does it do with the `ctx` parameter?
+   Answer: The `handler` function is the main entry point for the `PoolCreate` instruction. It takes a `Context<PoolCreate>` parameter, which provides access to the accounts defined in the `PoolCreate` struct. The function initializes the new pool account and increments the registry's pool counter.
+
+4. Question: What is the purpose of the `init` attribute in the `#[account]` attribute for the `pool` field?
+   Answer: The `init` attribute indicates that the `pool` account is being initialized in this instruction. It ensures that the account is not yet initialized and sets up the initial state of the account with the provided constraints.
+
+5. Question: What is the purpose of the `constraint` attribute in the `#[account]` attribute for the `registry` field?
+   Answer: The `constraint` attribute is used to enforce a custom constraint on the `registry` account. In this case, it checks if the registry is locked and returns a `ClockworkError::RegistryLocked` error if the constraint is not met. This ensures that the registry is not locked before creating a new pool.
+    
