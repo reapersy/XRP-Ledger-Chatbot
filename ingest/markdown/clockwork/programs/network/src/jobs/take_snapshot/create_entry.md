@@ -22,4 +22,12 @@ In summary, the `create_entry.rs` file is responsible for creating snapshot entr
 2. Question: What does the `handler` function do, and what is its return type?
    Answer: The `handler` function is responsible for initializing a snapshot entry account, updating the snapshot frame, and building the next instruction for the thread. It returns a `Result<ThreadResponse>` type, which indicates the success or failure of the operation and contains the dynamic instruction for the next step.
 
-3. Question: 
+3. Question: How does the `handler` function initialize the snapshot entry account?
+   Answer: The `handler` function initializes the snapshot entry account by calling the `init` method on `snapshot_entry` with the required parameters such as `delegation.key()`, `snapshot_frame.total_entries`, `snapshot_frame.key()`, and `delegation.stake_amount`.
+
+4. Question: How does the `handler` function determine the next instruction for the thread?
+   Answer: The `handler` function determines the next instruction for the thread based on the current state of the snapshot frame and worker. If the snapshot frame has not captured all its entries, it creates a snapshot entry for the next delegation. If the snapshot frame has captured all its entries, it creates a frame for the next worker. If neither condition is met, it returns `None`.
+
+5. Question: What is the purpose of the `ThreadResponse` struct, and how is it used in the `handler` function?
+   Answer: The `ThreadResponse` struct is used to store the dynamic instruction for the next step in the thread and any other relevant information. In the `handler` function, it is used to return the dynamic instruction determined by the function's logic, along with the default values for any other fields in the struct.
+    
