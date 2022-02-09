@@ -20,4 +20,12 @@ The `SerializableAccount` struct represents account metadata needed to execute a
 2. Question: What does the `ClockData` struct represent?
    Answer: The `ClockData` struct represents a specific moment in time recorded by a Solana cluster, containing the current slot, bank epoch, and unix timestamp.
 
-3. Question: What are the different triggering conditions for a thread
+3. Question: What are the different triggering conditions for a thread as defined in the `Trigger` enum?
+   Answer: The triggering conditions for a thread include monitoring an account's data changes (`Account`), executing according to a schedule (`Cron`), executing immediately (`Now`), executing according to a slot (`Slot`), and executing according to an epoch number (`Epoch`).
+
+4. Question: What is the purpose of the `ThreadResponse` struct?
+   Answer: The `ThreadResponse` struct is a response value that target programs can return to update the thread. It contains fields for closing the thread and returning lamports to a provided address, executing a dynamic instruction, and updating the thread trigger.
+
+5. Question: What is the purpose of the `SerializableInstruction` and `SerializableAccount` structs?
+   Answer: The `SerializableInstruction` struct represents the data needed to execute an instruction on Solana, while the `SerializableAccount` struct represents the account metadata needed to execute an instruction. These structs are used to serialize and deserialize instructions and account metadata for storage and processing.
+    
