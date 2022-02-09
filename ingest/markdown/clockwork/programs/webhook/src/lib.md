@@ -27,4 +27,5 @@ In summary, the `lib.rs` file in the Clockwork project defines the main program 
    Answer: The code uses a wildcard import (`use state::*;` and `use instructions::*;`) which means it imports all public items from the `state` and `instructions` modules.
 
 5. Question: What is the purpose of the `#[program]` attribute macro in the code?
-   Answer: The `#[program]` attribute macro is used to define the entry point for the Solana program. It is part of the Anchor framework and helps
+   Answer: The `#[program]` attribute macro is used to define the entry point for the Solana program. It is part of the Anchor framework and helps in generating the necessary boilerplate code for the program.
+    
