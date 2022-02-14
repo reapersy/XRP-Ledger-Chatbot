@@ -18,4 +18,11 @@ assert_eq!(parsed_clock, SysvarAccountType::Clock(UiClock::default()));
 
 In this example, a test clock sysvar account is created, and then the `parse_sysvar` function is called with the account data and clock sysvar public key. The function returns a `SysvarAccountType::Clock` variant containing a `UiClock` struct with the parsed clock data.
 ## Questions: 
- 1. **Question**: What is the purpose of
+ 1. **Question**: What is the purpose of the `parse_sysvar` function and what are its input parameters?
+   **Answer**: The `parse_sysvar` function is used to parse the data of a sysvar account and return the corresponding `SysvarAccountType` enum variant. It takes two input parameters: a byte slice `data` representing the account data, and a reference to a `Pubkey` representing the account's public key.
+
+2. **Question**: What is the `SysvarAccountType` enum used for and what are its variants?
+   **Answer**: The `SysvarAccountType` enum is used to represent the different types of sysvar accounts that can be parsed. Its variants include `Clock`, `EpochSchedule`, `Fees`, `RecentBlockhashes`, `Rent`, `Rewards`, `SlotHashes`, `SlotHistory`, and `StakeHistory`, each containing a corresponding data structure.
+
+3. **Question**: Why are there `#[allow(deprecated)]` attributes in the code and what do they signify?
+   **Answer**: The `#[allow(deprecated)]` attributes are used to suppress warnings for deprecated items in the code. In this case, they are applied to the `Fees` and `RecentBlockhashes` variants of the `SysvarAccountType` enum, indicating that these variants are deprecated and may be removed or replaced in future versions of the code.
