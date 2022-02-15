@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/banks-interface/src)
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/banks-interface)
 
 The `solana/banks-interface/src/lib.rs` file defines a trait called `Banks` and several related structs and enums that provide a high-level interface for interacting with Solana's banking system. This interface allows developers to send transactions, check their status, and retrieve account information.
 
