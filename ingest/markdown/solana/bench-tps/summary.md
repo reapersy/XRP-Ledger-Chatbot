@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/bench-tps/src)
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/bench-tps)
 
-The `solana/bench-tps/src` folder contains code for benchmarking the transaction processing speed (TPS) of the Solana blockchain network. It provides a set of tools and utilities for measuring the performance of the network, identifying bottlenecks, and optimizing the network for maximum efficiency.
+The `solana/bench-tps` folder contains code for benchmarking the transaction processing speed (TPS) of the Solana blockchain network. It provides a set of tools and utilities for measuring the performance of the network, identifying bottlenecks, and optimizing the network for maximum efficiency.
 
 The `BenchTpsClient` trait, defined in `bench_tps_client.rs`, provides a high-level interface for interacting with the Solana blockchain network. It offers methods for sending transactions, querying account balances, and performing other operations on the network. Implementations of this trait are provided in the `bench_tps_client` subfolder for various client types, such as `BankClient`, `RpcClient`, `ThinClient`, and `TpuClient`.
 
