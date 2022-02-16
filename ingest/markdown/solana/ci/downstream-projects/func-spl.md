@@ -1,0 +1,7 @@
+[View code on GitHub](https://github.com/solana-labs/solana/blob/master/ci/downstream-projects/func-spl.sh)
+
+The `func-spl.sh` file contains a Bash function called `spl()`. This function is used to build and test a set of Solana programs from the Solana Program Library (SPL). The purpose of this function is to ensure that the programs in the SPL are compatible with the version of Solana being used in the larger project.
+
+The function starts by defining an array called `PROGRAMS` that contains the names of the programs to be built and tested. These programs include the token program, the memo program, the stake-pool program, and others. The function then clones the SPL repository from GitHub into a directory called `spl`. It also copies a file called `rust-toolchain.toml` from the Solana directory to the `spl` directory. This file is used to specify the version of Rust to be used when building the programs.
+
+The function then checks the version of Solana being used in the larger project against the version of Solana specified in the `Cargo.toml` file of the token program. If the version of Solana being used is greater than the version specified in the token program, the function skips building and testing the programs. Otherwise, the function runs a script called `patch.
