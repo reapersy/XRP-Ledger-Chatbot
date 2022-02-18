@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/clap-v3-utils/src)
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/clap-v3-utils)
 
 The `clap-v3-utils` module in the Solana project provides utility functions and structures for building command-line interfaces (CLI) for Solana applications. It focuses on reusability and extensibility, simplifying the code and improving the user experience for end-users. The module is built using the `clap` crate, a popular command-line argument parser for Rust.
 
