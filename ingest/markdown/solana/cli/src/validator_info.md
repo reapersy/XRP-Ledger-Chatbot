@@ -17,4 +17,10 @@ The `process_set_validator_info` and `process_get_validator_info` functions hand
 In summary, this file provides the necessary functionality for managing validator information on the Solana network through the Solana CLI. Users can publish and retrieve validator information using the provided subcommands and utility functions.
 ## Questions: 
  1. **Question**: What is the purpose of the `check_details_length` function and how does it work?
-   **Answer**: The `check_details_length` function checks if the length of a given validator details string is within the allowed limit (MAX_LONG_FIELD_LENGTH). If the length is greater than the limit, it
+   **Answer**: The `check_details_length` function checks if the length of a given validator details string is within the allowed limit (MAX_LONG_FIELD_LENGTH). If the length is greater than the limit, it returns an error; otherwise, it returns Ok(()).
+
+2. **Question**: How does the `verify_keybase` function work and what is its purpose?
+   **Answer**: The `verify_keybase` function checks if the given keybase username is valid by sending a HEAD request to the Keybase URL containing the validator's public key. If the request is successful, it means the keybase username is valid and the function returns Ok(()). If not, it returns an error.
+
+3. **Question**: What is the purpose of the `parse_validator_info` function and how does it work?
+   **Answer**: The `parse_validator_info` function takes a public key and an account as input and checks if the account is a valid validator info account. If the account is valid, it deserializes the account data into a tuple containing the validator public key and a map of validator info. If the account is not valid, it returns an error.
