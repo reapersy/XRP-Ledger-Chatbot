@@ -1,0 +1,7 @@
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/connection-cache)
+
+The `connection-cache` module in the Solana project is responsible for managing client connections to the Solana network. It provides a cache of connections that can be reused by clients, reducing the overhead of establishing new connections and improving performance.
+
+The module contains several files, including `client_connection.rs`, `connection_cache.rs`, and `connection_cache_stats.rs`. The `client_connection.rs` file defines a `ClientConnection` trait that outlines methods for sending data synchronously and asynchronously. The `connection_cache.rs` file defines a `ConnectionCache` struct that maintains a map of connections to remote addresses and provides methods to create new connections, add connections to the pool, and get connections from the pool. The `connection_cache_stats.rs` file defines a `ConnectionCacheStats` struct that is used to track statistics related to the connection cache, such as the number of connections in the pool and the number of connections that have been created.
+
+The `nonblocking` subfolder contains code for creating non-blocking TCP connections, which can be used to improve performance by allowing multi
