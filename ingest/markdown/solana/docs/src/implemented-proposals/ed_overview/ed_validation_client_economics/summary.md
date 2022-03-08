@@ -1,0 +1,3 @@
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/docs/src/implemented-proposals/ed_overview/ed_validation_client_economics)
+
+The `ed_validation_client_economics` folder in the Solana project contains documentation related to the economics of validator clients in the Solana ecosystem. This folder is part of the implemented proposals section, which means that the concepts and ideas discusse

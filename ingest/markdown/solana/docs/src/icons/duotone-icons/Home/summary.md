@@ -12,4 +12,26 @@ Here's a brief overview of the files in this folder:
 
 ## Usage
 
-To use the `Home` icon in your project, simply import the `Home` component from the `autodoc/solana/docs/src/icons/du
+To use the `Home` icon in your project, simply import the `Home` component from the `autodoc/solana/docs/src/icons/duotone-icons/Home` folder and include it in your JSX code. For example:
+
+```javascript
+import React from 'react';
+import HomeIcon from 'autodoc/solana/docs/src/icons/duotone-icons/Home/Home';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <h1>Welcome to Solana</h1>
+      <HomeIcon className="my-custom-class" style={{ fontSize: '24px' }} />
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+In this example, the `HomeIcon` component is imported and used within the `MyComponent` component. The `className` and `style` props are used to apply custom styling to the icon.
+
+## Conclusion
+
+The `Home` folder in the `autodoc/solana/docs/src/icons/duotone-icons` directory provides a set of duotone home icons for use within the Solana project. These icons are implemented as React components and can be easily imported and used in other parts of the project. The use of SVG ensures that the icons are scalable and efficient, while the React component structure allows for easy customization and integration with other UI elements.
