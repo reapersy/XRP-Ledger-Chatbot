@@ -18,4 +18,4 @@ These images are used in the Solana documentation to provide a clear and concise
 
 For example, a developer who is new to Solana and wants to set up a validator can refer to the Quickstart guides and use these images as a reference while following the steps. The images provide a clear visual representation of the commands to be executed and the expected output, making it easier for the developer to understand the process and ensure that they are executing the commands correctly.
 
-In summa
+In summary, the `autodoc/solana/docs/static/img/quickstarts` folder contains images that are used in the Solana project's documentation to provide visual aids for users who are following the Quickstart guides. These images help users to better understand the concepts and processes involved in setting up and running a Solana validator, making it easier for them to follow along and implement the steps in their own environment.
