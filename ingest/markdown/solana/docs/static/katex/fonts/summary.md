@@ -46,4 +46,4 @@ To use KaTeX in your project, you would typically include the KaTeX library and 
 </html>
 ```
 
-In summary, the `autodoc/solana/docs/static/katex/fonts` folde
+In summary, the `autodoc/solana/docs/static/katex/fonts` folder contains the font files required by the KaTeX library to render mathematical notation in the Solana documentation. These fonts ensure that the notation is displayed correctly and consistently across different browsers and platforms.

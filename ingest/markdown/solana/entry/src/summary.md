@@ -1,0 +1,3 @@
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/entry/src)
+
+The `autodoc/solana/entry/src` folder contains Rust code for the Solana project, focusing on the entry system and Proof of History (PoH) implementation. The entry system is responsible for processing and validating transactions, while PoH is a cryptographic technique for generating a verifiable and time-ordered sequence of hashes, allowing the network to reach consensus on the order of events with
