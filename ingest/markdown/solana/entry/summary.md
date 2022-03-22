@@ -1,8 +1,8 @@
-[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/entry/src)
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/entry)
 
-The `autodoc/solana/entry/src` folder contains Rust code for the Solana project, focusing on the entry system and Proof of History (PoH) implementation. The entry system is responsible for processing and validating transactions, while PoH is a cryptographic technique for generating a verifiable and time-ordered sequence of hashes, allowing the network to reach consensus on the order of events without a central authority.
+The `autodoc/solana/entry` folder focuses on the entry system and Proof of History (PoH) implementation for the Solana project. The entry system is responsible for processing and validating transactions, while PoH is a cryptographic technique for generating a verifiable and time-ordered sequence of hashes, allowing the network to reach consensus on the order of events without a central authority.
 
-The `lib.rs` file serves as a high-level entry point for other parts of the Solana project to access the `entry` and `poh` modules, as well as the `log` crate for logging purposes. For example, other modules may import this module and use its contents to process transactions or generate proofs of history:
+The `src` folder contains Rust code for the entry system and PoH implementation. The `lib.rs` file serves as a high-level entry point for other parts of the Solana project to access the `entry` and `poh` modules, as well as the `log` crate for logging purposes. For example, other modules may import this module and use its contents to process transactions or generate proofs of history:
 
 ```rust
 use solana::entry::Entry;
@@ -41,4 +41,4 @@ fn main() {
 }
 ```
 
-In summary, the `autodoc/solana/entry/src` folder contains Rust code for the Solana project's entry system and PoH implementation. It provides a high-level entry point for other modules to access these functionalities, as well as utility functions and tests to ensure the correctness of the PoH algorithm.
+The `benches` folder contains the `entry_sigverify.rs` file, which benchmarks the performance of signature verification for transactions using GPUs and CPUs. This is important for optimizing the signature verification process and improving the overall performance of the Solana blockchain. Developers can use these benchmarks to determine whether GPUs or CPUs provide better performance for signature verification in their specific use case, and to make informed decisions about hardware and software optimizations.
