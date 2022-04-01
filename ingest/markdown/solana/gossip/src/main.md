@@ -23,4 +23,10 @@ Example usage:
   ```
 ## Questions: 
  1. **Question**: What is the purpose of the `parse_matches()` function and how does it work?
-   **Answer**: The `
+   **Answer**: The `parse_matches()` function is responsible for parsing the command-line arguments provided by the user. It defines the structure of the command-line interface, including subcommands, flags, and their respective options, using the `clap` crate. It then returns the parsed matches as an `ArgMatches` object.
+
+2. **Question**: How does the `process_spy()` function work and what is its role in the program?
+   **Answer**: The `process_spy()` function is responsible for handling the "spy" subcommand. It takes the parsed command-line arguments, sets up the necessary parameters (such as entrypoint address, gossip host, and gossip address), and then calls the `discover()` function to discover the validators in the network. After that, it processes the results based on the provided options (such as timeout, number of nodes, and specific node pubkey) and prints the output accordingly.
+
+3. **Question**: What is the purpose of the `socket_addr_space` variable and how is it used in the program?
+   **Answer**: The `socket_addr_space` variable is an instance of the `SocketAddrSpace` enum, which is used to determine whether the program should allow contacting private IP addresses or not. It is created based on the presence of the `allow_private_addr` flag in the command-line arguments. This variable is then passed to the `process_spy()` and `process_rpc_url()` functions, which use it to filter the discovered validators based on their IP address types (public or private).
