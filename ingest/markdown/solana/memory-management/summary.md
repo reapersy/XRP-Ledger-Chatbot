@@ -33,4 +33,4 @@ let align = 4;
 assert!(!is_memory_aligned(ptr, align)); // false
 ```
 
-In summary, the `memory-management` module provides essential utilities for managing memory allocation and alignment in the `solana` project. 
+In summary, the `memory-management` module provides essential utilities for managing memory allocation and alignment in the `solana` project. Developers can use the `AlignedMemory` struct to allocate memory with a specified alignment and the `is_memory_aligned` function to verify that memory addresses are properly aligned. These utilities help ensure optimal performance and prevent potential issues caused by misaligned memory.
