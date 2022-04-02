@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/metrics/scripts/grafana-provisioning/dashboards)
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/metrics/scripts/grafana-provisioning)
 
-The `dashboard.yml` file is a configuration file for Grafana, which is an open-source platform for data visualization and monitoring. In the context of the Solana project, Grafana is used to monitor and visualize metrics related to the Solana blockchain. This configuration file is specifically used to provision dashboards for Grafana using InfluxDB as the data source.
+The `dashboard.yml` file in the `autodoc/solana/metrics/scripts/grafana-provisioning/dashboards` folder is a configuration file for Grafana, an open-source platform for data visualization and monitoring. In the context of the Solana project, Grafana is used to monitor and visualize metrics related to the Solana blockchain. This configuration file is specifically used to provision dashboards for Grafana using InfluxDB as the data source.
 
 The file contains several fields that define the configuration settings for Grafana:
 
