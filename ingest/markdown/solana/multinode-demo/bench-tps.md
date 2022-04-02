@@ -30,4 +30,4 @@ Overall, the `bench-tps.sh` script provides a convenient way to run the `solana-
 
 3. What is the default behavior of this script if no arguments are provided?
    
-   If no arguments are provided, the script runs the `solana-bench-tps` command with default arguments, including an entrypoint of `127.0.0.1:8001`, a faucet of `127.0.0.1:9900`, a duration of 90 second
+   If no arguments are provided, the script runs the `solana-bench-tps` command with default arguments, including an entrypoint of `127.0.0.1:8001`, a faucet of `127.0.0.1:9900`, a duration of 90 seconds, a transaction count of 50000, and a thread batch sleep time of 0 milliseconds.
