@@ -20,4 +20,10 @@ Overall, the `cleanup.sh` script is an important tool for cleaning up Solana rem
    
    This script is used to clean up and kill all Solana processes and sessions running on a remote machine.
 
-2. What is the significance of the `sudo` command in this script
+2. What is the significance of the `sudo` command in this script?
+   
+   The `sudo` command is used to run the `kill` command with root privileges, allowing the script to kill processes that require elevated permissions.
+
+3. What is the purpose of the `solana/scripts/net-shaper.sh` script?
+   
+   The `solana/scripts/net-shaper.sh` script is used to manage network traffic shaping for Solana processes, and the `cleanup` command is used to clean up any existing traffic shaping rules.
