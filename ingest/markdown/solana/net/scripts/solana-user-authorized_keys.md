@@ -21,4 +21,13 @@ SOLANA_PUBKEYS+=('ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDgdbzGLiv9vGo3yaJGzxO3Q2/
 
 In this case, the user 'trent' has two public keys associated with their account, allowing them to access the project's resources using either key.
 
-This script is an essential part of the Solana project's security infrastruct
+This script is an essential part of the Solana project's security infrastructure, as it ensures that only authorized users can access the testnets and datacenter nodes. By maintaining a centralized list of authorized users and their public keys, the project can efficiently manage access control and keep its resources secure.
+## Questions: 
+ 1. **Question**: What is the purpose of the `SOLANA_USERS` and `SOLANA_PUBKEYS` arrays in this script?
+   **Answer**: The `SOLANA_USERS` array contains the usernames of users who should be granted access to all testnets and datacenter nodes in the Solana project. The `SOLANA_PUBKEYS` array contains the corresponding public keys for each user, which are used for authentication.
+
+2. **Question**: How can a new user be added to this list to gain access to the testnets and datacenter nodes?
+   **Answer**: To add a new user, first generate a new key pair using `ssh-keygen -t ecdsa -N '' -f ~/.ssh/id-solana-testnet`. Then, add an entry to the `SOLANA_USERS` array with the new user's username, and add an entry to the `SOLANA_PUBKEYS` array with the contents of the newly generated public key file (`~/.ssh/id-solana-testnet.pub`).
+
+3. **Question**: Can a user have multiple keys associated with their username? If so, how can this be achieved?
+   **Answer**: Yes, a user can have multiple keys associated with their username. To achieve this, simply add the username to the `SOLANA_USERS` array multiple times, once for each key, and add the corresponding public keys to the `SOLANA_PUBKEYS` array.
