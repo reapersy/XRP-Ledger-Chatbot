@@ -18,4 +18,8 @@ Overall, the `gce-self-destruct.sh` script is a useful tool for managing GCE ins
 
 2. How does the self-destruct timer work?
    
-   The self-destruct timer is set up using the `gce_self_destruct_setup` function, which takes 
+   The self-destruct timer is set up using the `gce_self_destruct_setup` function, which takes a timeout in hours as an argument. The function calculates the time at which the instance should be destroyed and schedules a job using the `at` command. The `gce_self_destruct_check` function is called by the scheduled job and checks whether the current time has exceeded the destruction time. If the destruction time has passed, the function deletes the GCE instance.
+
+3. What is the purpose of the `gce_self_destruct_motd` and `gce_self_destruct_ps1` functions?
+   
+   The `gce_self_destruct_motd` function is used to display a message of the day (MOTD) that indicates whether the instance will self-destruct and the remaining time until destruction. The `gce_self_destruct_ps1` function is used to modify the command prompt to display the remaining time until destruction.
