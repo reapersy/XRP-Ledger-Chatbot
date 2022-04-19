@@ -22,4 +22,4 @@ Overall, this file provides benchmark tests for the Solana blockchain's bank mod
 
 3. What is the significance of the `BUILTIN_PROGRAM_ID` and `NOOP_PROGRAM_ID` constants?
    
-   These constants represent the IDs of built-in programs in 
+   These constants represent the IDs of built-in programs in Solana's runtime. `BUILTIN_PROGRAM_ID` refers to the ID of the built-in program that executes transactions, while `NOOP_PROGRAM_ID` refers to the ID of a built-in program that does nothing. These constants are used in the functions for creating transactions.
