@@ -10,4 +10,15 @@ The `process_compute_budget_instruction` method creates a `ComputeBudget` object
 
 The `get_transaction_priority_details` method calls the `process_compute_budget_instruction` method with the program instructions iterator of the sanitized transaction and returns the result. 
 
-The `tests` module contains several unit tests that create different types of transactions and assert that the `get_transaction_priority_details` method returns the expecte
+The `tests` module contains several unit tests that create different types of transactions and assert that the `get_transaction_priority_details` method returns the expected `TransactionPriorityDetails` object. 
+
+Overall, this code provides a way to extract transaction priority details from a sanitized transaction, which can be useful for prioritizing transactions in a transaction pool or for other purposes.
+## Questions: 
+ 1. What is the purpose of the `TransactionPriorityDetails` struct?
+- The `TransactionPriorityDetails` struct holds information about the priority and compute unit limit of a transaction.
+
+2. What is the `GetTransactionPriorityDetails` trait used for?
+- The `GetTransactionPriorityDetails` trait defines a method to get the transaction priority details and a method to process compute budget instructions.
+
+3. What are the tests in the `tests` module testing?
+- The tests in the `tests` module are testing the `get_transaction_priority_details` method for different types of transactions with different compute budget instructions, and asserting that the expected `TransactionPriorityDetails` are returned.
