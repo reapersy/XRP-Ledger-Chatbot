@@ -1,0 +1,5 @@
+[View code on GitHub](https://github.com/solana-labs/solana/blob/master/scripts/perf-plot.py)
+
+The `perf-plot.py` script is a tool used to generate performance plots from a JSON file containing performance data. The script takes a single command-line argument, which is the path to the input file containing the performance data. The script then reads the input file line by line, looking for lines that contain the string "COUNTER". When it finds such a line, it extracts the JSON data from the line and parses it to extract the name of the counter, the count value, and the timestamp. The script then stores this data in two dictionaries: `stages_to_counters` and `stages_to_time`.
+
+The `stages_to_counters` dictionary maps counter names to lists of count values, while the `stages_to_time` dictionary maps counter names to lists of timestamps. Once all the data has been read from the input file and stored in these dictionaries, the script generates a plot of the data using the `matplotlib` library.

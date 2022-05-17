@@ -33,4 +33,34 @@ The script then builds and installs the Solana project using the `cargo` binary.
 - `cargo-test-sbf`
 - `solana-dos`
 - `solana-install-init`
-- 
+- `solana-stake-accounts`
+- `solana-test-validator`
+- `solana-tokens`
+- `solana-watchtower`
+- `solana-genesis`
+
+The script also installs the `spl-token-cli` binary if the `--validator-only` flag is not specified.
+
+The script then copies the built binaries to the specified install directory. The script also copies the `perf-libs` directory to the install directory if it exists.
+
+Finally, the script prints instructions on how to use the installed binaries.
+
+Example usage:
+
+```
+./cargo-install-all.sh +stable --debug /usr/local/bin/solana
+```
+
+This command installs the Solana project using the stable version of `cargo` in debug mode. The binaries are installed in the `/usr/local/bin/solana` directory.
+## Questions: 
+ 1. What is the purpose of this script?
+   
+   This script installs the Solana binaries in the specified directory.
+
+2. What is the significance of the `validator-only` flag?
+   
+   The `validator-only` flag limits the installation to end-user command-line tools and excludes unused binaries to speed up net.sh deploys.
+
+3. What is the purpose of the `solana-genesis` binary and why is it built last?
+   
+   The `solana-genesis` binary is used to generate the genesis block for a new Solana network. It is built last to ensure that all other binaries are built before it, as it depends on them.
