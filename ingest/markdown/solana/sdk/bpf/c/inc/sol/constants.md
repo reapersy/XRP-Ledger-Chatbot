@@ -31,4 +31,12 @@ In this example, the program first allocates memory from the Solana heap using t
 ## Questions: 
  1. What is the purpose of this code?
     
-    Thi
+    This code defines constants for the start address and length of a memory region provided by the Solana runtime for heap operations.
+
+2. What are the built-in functions `sol_calloc` and `sol_free` used for?
+    
+    These functions are used to allocate and free memory from the memory region provided by the Solana runtime for heap operations.
+
+3. Can a program implement its own heap on top of the memory region provided by the Solana runtime?
+    
+    Yes, a program can implement its own heap on top of the memory region provided by the Solana runtime, but it should not call the built-in heap functions because they will conflict.
