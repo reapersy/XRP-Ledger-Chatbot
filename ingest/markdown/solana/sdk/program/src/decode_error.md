@@ -44,4 +44,4 @@ assert_eq!(my_error, MyError::B);
 
 3. What is the purpose of the `test_decode_custom_error_to_enum` function?
     
-    The `test_decode_custom_error_to_enum` functi
+    The `test_decode_custom_error_to_enum` function tests the `DecodeError` trait implementation for a custom error enum `TestEnum` by decoding `u32` error codes to the original error enum they represent.
