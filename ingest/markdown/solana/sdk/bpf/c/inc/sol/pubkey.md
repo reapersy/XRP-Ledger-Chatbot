@@ -52,4 +52,4 @@ int main() {
 
 3. What is the purpose of the `sol_try_find_program_address` function and how is it used?
    
-   The `sol_try_find_program_address` function is used to fin
+   The `sol_try_find_program_address` function is used to find a program address and return the corresponding bump seed. It takes in an array of `SolSignerSeed` structs, the length of the array, a `SolPubkey` representing the program ID, a pointer to a `SolPubkey` that will be filled with the resulting program address, and a pointer to a `uint8_t` that will be filled with the bump seed. The function returns a `uint64_t` error code.
