@@ -10,4 +10,15 @@ The `StakeHistoryEntry` struct provides three constructors that allow for creati
 
 The `StakeHistory` struct also implements the `Deref` trait, which allows for treating the stake history as a vector of tuples. This is useful for iterating over the stake history or accessing individual entries.
 
-The `tests` module contains a unit test for the 
+The `tests` module contains a unit test for the `StakeHistory` struct, which tests adding entries to the stake history and retrieving entries for specific epochs.
+
+Overall, the `StakeHistory` struct is an important component of the Solana blockchain, as it is used to calculate rewards and penalties for validators. The struct provides a simple and efficient way to store and retrieve stake history entries, and the constructors for the `StakeHistoryEntry` struct make it easy to create entries with different combinations of stake values.
+## Questions: 
+ 1. What is the purpose of the `StakeHistory` type and how is it used in the Solana system?
+- The `StakeHistory` type is used to hold data for the `StakeHistory` sysvar in the Solana system, which tracks the history of staked tokens over time. It is used to determine the stake weight of validators and to calculate rewards for stakers.
+
+2. What is the significance of the `MAX_ENTRIES` constant and why is it set to 512?
+- The `MAX_ENTRIES` constant represents the maximum number of entries that can be stored in the `StakeHistory` vector. It is set to 512 because it is assumed that it should never take more than 512 epochs to warm up or cool down staked tokens.
+
+3. How does the `StakeHistory` type handle adding and retrieving entries?
+- The `StakeHistory` type uses a vector of tuples to store entries, where each tuple contains an epoch and a `StakeHistoryEntry`. Entries can be added using the `add` method, which inserts a new tuple into the vector or updates an existing one. Entries can be retrieved using the `get` method, which performs a binary search on the vector to find the tuple with the closest epoch to the input epoch and returns the corresponding `StakeHistoryEntry`.
