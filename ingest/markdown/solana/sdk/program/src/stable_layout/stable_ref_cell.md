@@ -28,4 +28,4 @@ In this example, a `RefCell` is used to manage a vector of integers. The `borrow
    RefCell is a type of cell in Rust that allows for dynamic borrowing of its contents. It is being tested for memory layout to ensure that it has a stable layout and can be safely used in different contexts.
 
 3. What is the significance of the values being asserted in the test?
-   The values being asserted in the test are checking that the RefCell has the expected size and alignment, and that the borrow count and value of the RefCell are being stored at the expected memory addresses. This ensures that the RefCell is being properly managed
+   The values being asserted in the test are checking that the RefCell has the expected size and alignment, and that the borrow count and value of the RefCell are being stored at the expected memory addresses. This ensures that the RefCell is being properly managed and can be safely used in Rust programs.
