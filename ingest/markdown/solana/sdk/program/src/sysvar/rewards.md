@@ -21,4 +21,7 @@ assert_eq!(rewards.unused, 0.0);
 - This code defines a struct called Rewards that contains two fields, validator_point_value and unused. It is marked as deprecated and unused, indicating that it is no longer being used in the project and should not be relied upon for future development.
 
 2. What is the significance of the `declare_sysvar_id!` macro used in this code?
-- The `declare_sysvar_id!` macro is used to generate a unique identifier for the Rewards sysvar, which can be used to retrieve it from the 
+- The `declare_sysvar_id!` macro is used to generate a unique identifier for the Rewards sysvar, which can be used to retrieve it from the system state.
+
+3. What is the purpose of the `new` function in the Rewards struct?
+- The `new` function is a constructor for the Rewards struct that takes a validator_point_value parameter and initializes the struct with that value and a default value of 0.0 for the unused field.
