@@ -1,0 +1,3 @@
+[View code on GitHub](https://github.com/solana-labs/solana/blob/master/sdk/src/epoch_info.rs)
+
+The `epoch_info.rs` file contains a Rust module that defines a struct called `EpochInfo`. This struct represents information about the current epoch in the Solana blockchain network. The module is used to retrieve information about the current epoch, such as the current epoch number, the current slot index, the number of slots in the epoch, the absolute current slot, the current block height, and the total number of transactions processed without error 
