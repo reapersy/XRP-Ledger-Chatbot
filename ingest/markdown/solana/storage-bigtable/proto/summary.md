@@ -22,4 +22,4 @@ fn my_grpc_service(request: MyRequest) -> Result<MyResponse, Status> {
 }
 ```
 
-In summary, the code in the `solana/storage-bigtable/proto` directory plays a crucial role in the Solana project by defining message types for data representation in the storage bigtable and providing a standardized way to represent errors across dif
+In summary, the code in the `solana/storage-bigtable/proto` directory plays a crucial role in the Solana project by defining message types for data representation in the storage bigtable and providing a standardized way to represent errors across different programming environments.
