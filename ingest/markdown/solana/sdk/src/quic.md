@@ -38,4 +38,5 @@ fn main() {
 2. What is the significance of the different receive window ratios?
 - The receive window for QUIC connections from unstaked nodes is set to 1 times the packet data size, while the receive window for connections from minimum staked nodes is set to 2 times the packet data size, and the receive window for connections from maximum staked nodes is set to 10 times the packet data size. This determines the amount of data that can be sent before waiting for an acknowledgement.
 
-3. Why are there different maximum concurrent strea
+3. Why are there different maximum concurrent stream numbers for staked and unstaked nodes?
+- The maximum number of concurrent streams for unstaked nodes is empirically set to 128, while the maximum number of concurrent streams for staked nodes is set to 2048. This is to avoid excessive streams and improve TPS on GCE, while also ensuring stability and avoiding impact on performance.
