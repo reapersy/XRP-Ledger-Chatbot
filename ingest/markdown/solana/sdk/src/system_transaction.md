@@ -52,4 +52,15 @@ fn main() {
     let txs = vec![create_account_tx, transfer_tx];
     let blockhash = Hash::default();
     let signers = vec![&from_keypair, &to_keypair];
-    let tx = Transactio
+    let tx = Transaction::new(&signers, txs, blockhash);
+}
+```
+## Questions: 
+ 1. What is the purpose of the `system_transaction` module?
+- The `system_transaction` module provides functionality for creating system transactions.
+
+2. What are some of the functions available in this module and what do they do?
+- The available functions include `create_account`, `allocate`, `assign`, `transfer`, and `nonced_transfer`. These functions create and sign different types of system transactions, such as creating an account, allocating space, assigning a program ID, and transferring funds.
+
+3. What are the input parameters for the `create_account` function and what does it return?
+- The `create_account` function takes in the `from_keypair`, `to_keypair`, `recent_blockhash`, `lamports`, `space`, and `program_id` parameters. It returns a `Transaction` object that represents a new `SystemInstruction::CreateAccount` transaction.
