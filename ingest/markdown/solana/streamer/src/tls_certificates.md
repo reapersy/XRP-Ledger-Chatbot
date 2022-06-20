@@ -8,4 +8,13 @@ The `get_pubkey_from_tls_certificate` function takes a `rustls::Certificate` as 
 
 The `tests` module contains a single test function that generates a self-signed certificate and verifies that the public key extracted from the certificate matches the public key of the `Keypair` used to generate the certificate.
 
-Overall, this file provides a convenient way to generate and manage self-signed TLS certificates for use in the Solana project. The `new_self_signed_tls_certificate` function can be used to generate a certificate, and the `get_pubkey_from_tls_certificate` function can be used to extract the public key from the certificate. These functions can be used i
+Overall, this file provides a convenient way to generate and manage self-signed TLS certificates for use in the Solana project. The `new_self_signed_tls_certificate` function can be used to generate a certificate, and the `get_pubkey_from_tls_certificate` function can be used to extract the public key from the certificate. These functions can be used in other parts of the project that require TLS certificates.
+## Questions: 
+ 1. What is the purpose of this code?
+- This code generates a self-signed TLS certificate for a Solana node using rcgen and rustls libraries, and provides a function to extract the public key from a given TLS certificate.
+
+2. Why is there a TODO comment in the code?
+- The TODO comment asks whether it is safe to sign the TLS certificate with the identity private key, but does not provide an answer or explanation.
+
+3. What is the significance of the ED25519_IDENTIFIER constant?
+- The ED25519_IDENTIFIER constant is an Object Identifier (OID) that identifies the Ed25519 algorithm used to generate the private key. It is used to specify the algorithm in the PKCS#8 v1 object.
