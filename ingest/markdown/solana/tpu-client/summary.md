@@ -18,4 +18,9 @@ let tpu_client = TpuClient::new(rpc_client, websocket_url, config, connection_ma
 
 ```rust
 let transaction = Transaction::new_unsigned(message);
-tpu_client.send_transaction(&transaction).aw
+tpu_client.send_transaction(&transaction).await;
+```
+
+The `LeaderTpuService` struct is responsible for updating the leader TPU cache with new information about the current leader, upcoming leaders, and their TPU socket addresses. It does this by periodically fetching the latest leader schedule, cluster nodes, and epoch information from the RPC client and updating the `LeaderTpuCache` accordingly.
+
+In summary, the `solana/tpu-client/src` folder provides essential functionality for the Solana blockchain network by enabling both blocking and non-blocking communication with TPUs. This helps to ensure that the network remains fast and responsive even under heavy load. The `TpuClient` and `LeaderTpuService` structs are the main components, providing methods for sending transactions and managing leader TPU information.
