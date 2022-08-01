@@ -31,4 +31,7 @@ This module is useful for processing confidential transfer instructions in the S
    **Answer**: The `parse_confidential_transfer_instruction` function is responsible for parsing confidential transfer instructions based on the provided instruction data, account indexes, and account keys. It takes three input parameters: `instruction_data` which is a slice of bytes representing the instruction data, `account_indexes` which is a slice of bytes representing the account indexes, and `account_keys` which is a reference to the `AccountKeys` struct.
 
 2. **Question**: How does the function handle different types of `ConfidentialTransferInstruction`?
-   **Answer**: The function uses a match statement to handle different types of `ConfidentialTransferInstruction`. For each instruction type, it performs specific operations, checks the number o
+   **Answer**: The function uses a match statement to handle different types of `ConfidentialTransferInstruction`. For each instruction type, it performs specific operations, checks the number of token accounts, decodes the instruction data, and constructs a `ParsedInstructionEnum` with the appropriate instruction type and information.
+
+3. **Question**: What is the purpose of the `check_num_token_accounts` function and how is it used in the code?
+   **Answer**: The `check_num_token_accounts` function is used to ensure that the number of token accounts in the `account_indexes` slice matches the expected number for a specific instruction type. It is called within each match arm of the `ConfidentialTransferInstruction` match statement to validate the number of token accounts before proceeding with the parsing process.
