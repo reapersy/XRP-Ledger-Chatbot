@@ -11,4 +11,10 @@ The code also includes tests to ensure that the `parse_transfer_fee_instruction`
 Overall, this code plays a crucial role in handling transfer fee instructions in the Solana project, allowing the system to process and manage fees associated with token transfers.
 ## Questions: 
  1. **Question**: What is the purpose of the `parse_transfer_fee_instruction` function?
-   **Answer**: The `parse_transfer_fee_instruction` function is responsible for parsing the transfer fee instructions and returning a `ParsedInstructionEnum` containing the i
+   **Answer**: The `parse_transfer_fee_instruction` function is responsible for parsing the transfer fee instructions and returning a `ParsedInstructionEnum` containing the instruction type and associated information in a JSON format.
+
+2. **Question**: How does the function handle different types of `TransferFeeInstruction`?
+   **Answer**: The function uses a match statement to handle different types of `TransferFeeInstruction`. For each variant, it processes the relevant data, constructs a JSON object with the required information, and returns a `ParsedInstructionEnum` containing the instruction type and the JSON object.
+
+3. **Question**: How are the signers parsed in the `parse_transfer_fee_instruction` function?
+   **Answer**: The signers are parsed using the `parse_signers` function, which takes the JSON map, the number of signers, account keys, account indexes, and the authority keys as arguments. It then inserts the signers into the JSON map under the appropriate keys.

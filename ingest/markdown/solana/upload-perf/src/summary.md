@@ -1,0 +1,7 @@
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/upload-perf/src)
+
+The `upload-perf.rs` script in the `autodoc/solana/upload-perf/src` folder is responsible for uploading performance metrics to an InfluxDB database and comparing the current metrics against the previous ones stored in the database. This script is crucial for the performance testing infrastructure of the project, as it helps developers identify performance regressions and track the project's performance over time.
+
+The script starts with the `get_last_metrics` function, which retrieves the last performance metrics data from the InfluxDB database. It takes four arguments: `metric`, `db`, `name`, and `branch`. The function returns a `Result` object containing either the last performance metric data as a string or an error message.
+
+The `main` function serves as the entry point of the script. It reads the command line arguments, opens the JSON file containing the performance metrics data, and reads the data line by line. For each line of data, the function parses the JSON data, extracts the relevant performance metrics, and stores them in a `HashMap`. The function also retrieves the last performance metrics data from the InfluxDB database using the `get_last_metrics` func
