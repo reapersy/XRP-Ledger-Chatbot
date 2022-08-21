@@ -1,0 +1,5 @@
+[View code on GitHub](https://github.com/solana-labs/solana/blob/master/zk-token-sdk/src/instruction/withdraw.rs)
+
+The `withdraw.rs` file in the `zk-token-sdk` project contains code that implements a cryptographic proof for a confidential token withdrawal. The code provides a `WithdrawData` struct that includes the cryptographic proof and the account data information needed to verify the proof. The `WithdrawData` struct has a `context` field that contains the source account ElGamal public key and the source account available balance after the withdrawal (encrypted by `source_pk`). The `WithdrawData` struct also has a `proof` field that contains the cryptographic proof component that certifies the account's solvency for withdrawal. 
+
+The `WithdrawProof` struct represents the cryptographic proof component that certifies the account's solvency for withdrawal. It includes a new Pedersen commitment, an associated equality proof, and an associated range proof. The `WithdrawProof` struct has a `commitment` field that contains the new Pedersen commitment, an `equality_pro
