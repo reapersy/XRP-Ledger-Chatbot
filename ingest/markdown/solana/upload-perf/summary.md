@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/upload-perf/src)
+[View code on GitHub](https://github.com/solana-labs/solana/tree/master/na/upload-perf)
 
 The `upload-perf.rs` script in the `autodoc/solana/upload-perf/src` folder is responsible for uploading performance metrics to an InfluxDB database and comparing the current metrics against the previous ones stored in the database. This script is crucial for the performance testing infrastructure of the project, as it helps developers identify performance regressions and track the project's performance over time.
 
