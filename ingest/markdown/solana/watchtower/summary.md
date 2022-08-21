@@ -13,4 +13,9 @@ The `main()` function sets up the logger, metrics, and notifier, and then enters
 Example usage:
 
 ```sh
-solana-watchtower --url http://localhost:8899 --interval 60 --unhealthy-threshold 1 --validator-iden
+solana-watchtower --url http://localhost:8899 --interval 60 --unhealthy-threshold 1 --validator-identity <VALIDATOR_IDENTITY_PUBKEY>
+```
+
+This command will monitor the specified validator identity on the local cluster, checking every 60 seconds and sending a notification if an issue is detected for more than one consecutive check.
+
+In the larger Solana project, the watchtower tool can be used by developers and validators to monitor the health of their nodes and the overall cluster. This can help identify potential issues early on and ensure the stability and performance of the Solana network.
