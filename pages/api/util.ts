@@ -48,3 +48,18 @@ export const makeChain = (vectorstore: HNSWLib, onTokenStream?: (token: string) 
       presencePenalty: 0,
       modelName: 'gpt-3.5-turbo',
       streaming: Boolean(onTokenStream),
+      callbackManager: {
+        handleLLMStart: () => { },
+        handleLLMEnd: () => { },
+        handleLLMNewToken: onTokenStream,
+      } as any,
+    }),
+    { prompt: QA_PROMPT },
+  );
+
+  return new ChatVectorDBQAChain({
+    vectorstore,
+    combineDocumentsChain: docChain,
+    questionGeneratorChain: questionGenerator,
+  });
+}
